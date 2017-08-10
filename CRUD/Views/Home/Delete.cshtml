@@ -1,0 +1,35 @@
+﻿@model CRUD.Models.Aluno
+
+<h2>Apagar aluno</h2>
+@using (Html.BeginForm("delete", "home", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a => a.IdAluno)
+    <div class="form-group">
+        <label>Nome</label>
+        <p>@Model.Nome</p>
+    </div>
+
+    <div class="form-group">
+        <label>Sobrenome</label>
+        <p>@Model.Sobrenome</p>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <p>@Model.Email</p>
+    </div>
+
+    <div class="form-group">
+        <label>Cidade</label>
+        <p>@Model.Cidade</p>
+    </div>
+
+    <div class="form-group">
+        <label>Pais</label>
+        <p>@Model.Pais</p>
+    </div>
+
+    <div>
+        <input type="submit" value="Apagar" />
+    </div>
+}
